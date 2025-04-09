@@ -1,0 +1,752 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+
+/* Pour cacher la scroll barre sur Chrome, Edge et Safari */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* Pour Firefox */
+html {
+  scrollbar-width: none;
+}
+
+/* Pour Internet Explorer et Edge */
+body {
+  -ms-overflow-style: none;
+}
+
+/* 🌐 Responsive général pour les petits écrans */
+@media (max-width: 768px) {
+
+  /* Réduction des tailles de titres */
+  .green-title,
+  .team-title,
+  .contact-title,
+  .services,
+  .galerie-title,
+  .client-number,
+  .client-text,
+  .user-content {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .galerie-text,
+  .team-text,
+  .contact-text {
+    font-size: 1rem;
+    padding: 0 10px;
+  }
+
+  /* Images fluides */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .galerie-image {
+    margin: auto;
+    display: block;
+  }
+
+  .image-contener,
+  .statistics,
+  .client-container,
+  .us-container,
+  .us-images {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .presentation,
+  .us-imagecontainer {
+    width: 90%;
+    height: auto;
+  }
+
+  .bouton {
+    margin: 20px auto;
+    display: block;
+  }
+
+  .contact-form {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  .contact-input,
+  .contact-input.mail,
+  textarea.contact-input {
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  .us-text {
+    margin: 0 20px 50px 20px;
+    text-align: center;
+  }
+
+  .website {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .hero-title {
+    font-size: 30px;
+    right: 20px;
+    bottom: 5%;
+    text-align: center;
+  }
+
+  .user-name {
+    font-size: 20px;
+    padding-left: 0;
+    text-align: center;
+  }
+}
+
+
+
+header {
+  color: rgba(13, 98, 20, 255);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  margin-left: 2%;
+}
+
+.menu li {
+  padding: 10px;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: row;
+  list-style: none;
+  font-weight: bold;
+  font-size: 150%;
+  color: rgb(0, 0, 0);
+}
+
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .menu {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+    border: none;
+  }
+
+  .menu li {
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+
+.header-background {
+  display: flex;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: "poppins";
+}
+
+.hero-title {
+  position: absolute;
+  bottom: 2%;
+  right: 150px;
+  font-size: 60px;
+  max-width: 80%;
+  color: rgb(249, 252, 249);
+  font-weight: 400;
+}
+
+.hero-section {
+  object-fit: cover;
+}
+
+.green-title {
+  color: rgba(202, 235, 31, 255);
+  font-weight: bold;
+  display: block;
+  margin-left: -330px;
+  font-size: 60px;
+}
+
+.team-title {
+  color: rgba(2, 157, 91, 255);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 60px;
+  padding-top: 5%;
+  font-weight: bolder;
+}
+
+.team-text {
+  font-weight: bolder;
+  font-size: x-large;
+  display: block;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+.client-container {
+  background-color: rgba(5, 59, 69, 255);
+  font-weight: 600;
+  padding: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  gap: 150px;
+  margin-top: 200px;
+  margin-bottom: 200px;
+
+}
+
+.client-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.client-number {
+  font-size: 60px;
+  color: rgba(202, 235, 31, 255);
+  margin: 0 10px;
+}
+
+.client-text {
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+  margin-top: 10px;
+}
+
+.client-container span {
+  display: inline-block;
+}
+
+.clients {
+  color: rgba(202, 235, 31, 255);
+  font-weight: bold;
+  justify-content: center;
+  margin-left: 330px;
+}
+
+.satisfaits {
+  margin: 1px;
+  padding-bottom: 10px;
+}
+
+.user-name {
+  font-size: 50;
+  display: inline;
+  margin: 0%;
+  padding: 0%;
+  padding-left: 50px;
+}
+
+.user-content {
+  color: rgb(0, 0, 0);
+  padding-top: 20px;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 100px;
+}
+
+.service-contener .services {
+  color: rgba(2, 157, 91, 255);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+.services {
+  color: rgb(9, 175, 37);
+  padding: 10px;
+  font-size: 80px;
+  font-weight: 500;
+}
+
+.image-contener {
+  display: flex;
+  justify-content: space-around;
+}
+
+.image-item {
+  justify-content: center;
+}
+
+.image-item img {
+  display: block;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.image-item strong {
+  display: block;
+  font-size: 16px;
+}
+
+.content {
+  margin-left: 10%;
+  margin-bottom: 10%;
+}
+
+.statistics {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 10%;
+  margin-bottom: 100px;
+}
+
+.vector {
+  background-color: rgba(244, 246, 245, 255);
+  margin: 10px;
+  padding: 100px;
+  border-radius: 25px;
+}
+
+figcaption {
+  color: rgb(0, 0, 0);
+  font-size: 50px;
+  justify-content: center;
+  margin-left: 10px;
+  font-weight: bolder;
+  padding-top: 50px;
+}
+
+.website {
+  margin-left: -100px;
+}
+
+.contact-title {
+  color: rgba(202, 235, 31, 255);
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  font-size: 60px;
+  padding-top: 5%;
+  font-weight: bolder;
+  margin-bottom: 100px;
+}
+
+.contact-container {
+  width: 100%;
+  margin: auto;
+  background-color: rgba(5, 59, 69, 255);
+}
+
+.contact-text {
+  color: rgb(255, 255, 255);
+  font-size: 200%;
+  display: block;
+  text-align: center;
+  padding-bottom: 50px;
+  font-weight: 600;
+}
+
+label {
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+input,
+textarea {
+  background-color: transparent;
+  border: none;
+  border-bottom: 5px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-size: 30px;
+  padding: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 100px;
+  height: 20px;
+}
+
+.bouton {
+  border-radius: 50px;
+  background-color: rgba(213, 243, 31, 255);
+  color: (5, 59, 69, 1);
+  padding: 10px;
+  width: 200px;
+  height: 50px;
+  font-size: 20px;
+  margin-left: 1700px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.contact-form {
+  padding: 80px;
+  gap: 50px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.contact-input {
+  border-bottom: 2px solid white;
+  padding: 30px 0px;
+  width: 45%;
+  background-color: transparent;
+}
+
+.contact-input.mail {
+  width: 100%;
+}
+
+textarea.contact-input {
+  width: 100%;
+  height: 400px;
+  margin-bottom: 100px;
+}
+
+.contact-input::placeholder {
+  color: white;
+}
+
+.us-container {
+  display: flex;
+  justify-content: center;
+
+  padding-top: 50px;
+  gap: 20px;
+
+}
+
+
+
+.presentation {
+  height: 400px;
+  width: 600px;
+  border-radius: 5%;
+}
+
+
+
+
+
+.us-title {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  font-size: x-large;
+  margin-bottom: 20px;
+}
+
+
+.us-text {
+  margin-left: 100px;
+  margin-bottom: 50px;
+  font-size: medium;
+}
+
+
+.us-break {
+  display: block;
+  /* Forcer un retour à la ligne */
+  text-align: center;
+  /* Centrer le texte du span */
+  margin-left: -55px;
+  /* Vous pouvez ajuster l'espacement si nécessaire */
+}
+
+
+
+.us-imagecontainer {
+  border: solid rgba(153, 175, 179, 255) 2px;
+  border-radius: 5%;
+}
+
+
+.us-images {
+  display: flex;
+  /* Utilise Flexbox pour aligner les éléments en ligne */
+  justify-content: space-around;
+  /* Espace égal entre chaque image */
+  align-items: center;
+  /* Aligne les images et les textes verticalement au centre */
+}
+
+.us-image {
+  text-align: center;
+  /* Centre l'image et son texte */
+  width: 40px;
+  height: 40px;
+}
+
+.us-image img {
+  max-width: 100%;
+  /* Permet de s'assurer que les images sont responsive */
+  height: auto;
+  border-radius: 50%;
+  border: solid rgba(19, 70, 78, 255) 4px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+.us-strong {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  font-weight: bold;
+  width: 180px;
+  margin-left: -50px;
+}
+
+
+
+
+.galerie-title {
+  color: rgba(2, 157, 91, 255);
+  display: flex;
+  justify-content: center;
+  padding-top: 150px;
+  margin-bottom: 30px;
+  font-size: 60px;
+  font-weight: bolder;
+}
+
+
+.galerie-text {
+  text-align: center;
+  font-weight: bolder;
+  font-size: x-large;
+}
+
+.ligne1,
+.ligne2 {
+  display: inline-block;
+}
+
+
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.galerie-image {
+  border-radius: 2%;
+  margin-top: 40px;
+  justify-content: flex-end;
+  width: 55%;
+  height: 600px;
+  object-fit: cover;
+}
+
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+
+.right-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border: solid black 2px;
+}
+
+
+.right-arrow:hover {
+  outline-width: 10px;
+  color: green;
+}
+
+
+
+
+
+.right-arrow {
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid rgb(0, 0, 0);
+  border-right: 2px solid rgb(0, 0, 0);
+  transform: rotate(45deg);
+  justify-content: center;
+  display: flex;
+
+}
+
+
+.left-button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s ease;
+  border: solid 2px black;
+}
+
+
+
+.left-arrow {
+  width: 10px;
+  height: 10px;
+  border-bottom: 2px solid rgb(0, 0, 0);
+  border-left: 2px solid rgb(0, 0, 0);
+  transform: rotate(45deg);
+  justify-content: center;
+  display: flex;
+}
+
+
+
+
+.information-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  list-style: none;
+  font-weight: bold;
+  background-color: rgba(5, 59, 69, 255);
+  color: aliceblue;
+  padding-top: 30px;
+  height: 200px;
+
+}
+
+
+.phone-line {
+  margin-top: 50px;
+}
+
+
+.information-title {
+
+  font-size: large;
+  margin-top: 50px;
+}
+
+.information-text {
+  margin-top: 20px;
+  font-weight: lighter;
+}
+
+
+.contact-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.phone-line,
+.location-line {
+  display: flex;
+  align-items: flex-start;
+  /* pour aligner l’icône avec le haut du texte */
+}
+
+.phone-line i,
+.location-line i {
+  width: 20px;
+  margin-right: 8px;
+  color: rgb(204, 235, 32);
+  /* couleur de l'icône */
+  text-align: center;
+  font-size: 16px;
+}
+
+.phone-numbers span,
+.location-text span {
+  display: block;
+}
+
+
+
+.copyright-container {
+  background-color: rgb(4, 35, 40); /* couleur corrigée */
+  height: 150px;
+  display: flex;
+  justify-content: space-between; /* espace entre copyright et icônes */
+  align-items: center; /* alignement vertical centré */
+}
+
+.copyright-text {
+  color: white;
+  font-size: large;
+  display: flex;
+  margin-left: 200px;
+}
+
+.social-icons {
+  gap: 30px; /* espace entre les icônes */
+  margin-right: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.social-icon {
+  display: flex;
+  justify-content: center; /* aligne l'icône */
+  align-items: center; /* centre l'icône dans le cercle */
+  border: 2px solid #ffffff; /* bordure solide */
+  border-radius: 25%; /* bordure arrondie */
+  padding: 5px; /* écart entre l'icône et la bordure */
+  transition: background-color 0.3s ease; /* pour un effet lors du survol */
+}
+
+.social-icon i {
+  color: rgb(255, 255, 255); /* couleur des icônes */
+  font-size: 20px; /* taille des icônes */
+}
+
+.social-icon:hover {
+  background-color: rgba(204, 235, 32, 0.1); /* changement de fond au survol */
+}
