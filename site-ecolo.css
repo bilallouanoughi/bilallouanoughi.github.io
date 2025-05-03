@@ -11,12 +11,6 @@ html {
 }
 
 
-
-
-
-
-
-
 /* Pour cacher la scroll barre sur Chrome, Edge et Safari */
 ::-webkit-scrollbar {
   display: none;
@@ -33,17 +27,6 @@ body {
 }
 
 
-
-
-
-header {
-  color: rgba(13, 98, 20, 255);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px;
-  margin-left: 2%;
-}
 
 .menu li {
   padding: 10px;
@@ -66,34 +49,44 @@ header {
   width: 100%;
   height: auto;
   position: relative;
+
 }
 
 body {
   font-family: "poppins";
 }
 
-.hero-title {
-  position: absolute;
-  bottom: 2%;
-  right: 150px;
-  font-size: 50px;
-  max-width: 80%;
-  color: rgb(249, 252, 249);
-  font-weight: 400;
+.hero-section {
+  position: relative;
+  background-image: url('./ressources/feuilles.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
 }
 
-.hero-section {
-  object-fit: cover;
+.hero-title {
+  position: absolute;
+  bottom: 2rem;
+  right: 2rem;
+  color: rgb(249, 252, 249);
+  font-weight: 400;
+  font-size: 3.5vw;
+  line-height: 1.2;
+  text-align: left;
+}
+
+.hero-line {
+  display: block;
+  margin-left: 5.6ch; /* ajusté précisément pour tomber sur le 2e "e" de "agence" */
 }
 
 .green-title {
+  display: block;
   color: rgba(202, 235, 31, 255);
   font-weight: bold;
-  display: flex;
-  margin-left: -190px;
-  font-size: 60px;
-
+  font-size: 1.2em;
 }
+
 
 .team-title {
   color: rgba(2, 157, 91, 255);
@@ -163,9 +156,8 @@ body {
 .user-name {
   font-size: 50;
   display: inline;
-  margin: 0%;
-  padding: 0%;
-  padding-left: 50px;
+  display: flex;
+  justify-content: center;
 }
 
 .user-content {
@@ -192,17 +184,18 @@ body {
   font-weight: 500;
 }
 
+
 .image-contener {
   display: flex;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .image-item {
-  justify-content: center;
+  text-align: center;
 }
 
 .image-item img {
-  display: block;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -211,7 +204,6 @@ body {
 }
 
 .image-item strong {
-  display: block;
   font-size: 16px;
 }
 
@@ -396,6 +388,7 @@ textarea {
   padding-right: 20px;
   padding-left: 20px;
   margin-left: -20px;
+  object-fit:fill
 }
 
 .us-strong {
@@ -693,29 +686,9 @@ header {
 }
 
 
-.hero-title {
-  position: absolute;
-  bottom: 2%;
-  right: 150px;
-  font-size: 50px;
-  max-width: 80%;
-  color: white;
-  font-weight: 400;
-}
-
-
 /* --------- TITRES --------- */
 
-.team-title,
-.contact-title,
-.galerie-title,
-.services {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  font-size: 60px;
-  font-weight: bolder;
-}
+
 
 .team-title {
   color: rgba(2, 157, 91, 1);
@@ -734,24 +707,8 @@ header {
   margin-bottom: 30px;
 }
 
-.services {
-  color: rgb(9, 175, 37);
-  font-size: 80px;
-  font-weight: 500;
-}
 
-/* --------- CLIENT --------- */
-.client-container {
-  background-color: rgba(5, 59, 69, 1);
-  font-weight: 600;
-  padding: 50px;
-  text-align: center;
-  display: flex;
-  justify-content: center;
-  gap: 150px;
-  margin: 200px 0;
-  flex-wrap: wrap;
-}
+
 
 .client-box {
   display: flex;
@@ -785,45 +742,12 @@ header {
   padding-bottom: 5%;
 }
 
-.user-name {
-  font-size: 50px;
-  padding-left: 50px;
-}
-
-.user-content {
-  color: black;
-  padding-top: 20px;
-  text-align: center;
-  font-weight: 400;
-  font-size: 100px;
-}
-
-/* --------- SERVICES --------- */
-.service-contener {
-  text-align: center;
-}
-
 .image-contener {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
 }
 
-.image-item {
-  text-align: center;
-}
-
-.image-item img {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 10px;
-}
-
-.image-item strong {
-  font-size: 16px;
-}
 
 .statistics {
   display: flex;
@@ -899,18 +823,24 @@ textarea.contact-input {
     margin: 0;
   }
 
-  .hero-title {
-    font-size: 28px;
-    right: 20px;
-    bottom: 5%;
+.team-title{
+  text-align: center;
+}
+
+  .contact-title{
+    text-align: center;
   }
 
-  .green-title {
-    font-size: 30px;
-    margin-left: 0;
-    position: absolute;
+
+  .galerie-title{
+    text-align: center;
   }
 
+.image-contener {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
 
   .contact-form {
     flex-direction: column;
@@ -1066,9 +996,12 @@ textarea.contact-input {
   .information-title {
     font-size: large;
     margin-top: 50px;
+    text-align: center;
   }
 
-
+  .services{
+    text-align: center;
+  }
 
   .phone-line,
   .location-line {
@@ -1127,13 +1060,6 @@ textarea.contact-input {
     font-size: 120%;
   }
 
-  .hero-title,
-  .green-title {
-    font-size: 30px;
-    margin-left: 0;
-    right: 10%;
-    position: absolute;
-  }
 
   .client-container,
   .statistics {
