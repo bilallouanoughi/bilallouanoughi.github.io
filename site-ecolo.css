@@ -89,6 +89,7 @@ body {
   overflow-wrap: break-word;
   text-align: center;
   max-width: 100%;
+  font-weight: bold;
 }
 
 
@@ -920,7 +921,7 @@ textarea.contact-input {
     align-content: center;
     flex-direction: column-reverse;
     flex-wrap: wrap;
-    
+
   }
 
   /* --------- GALERIE --------- */
